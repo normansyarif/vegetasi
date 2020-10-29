@@ -175,15 +175,7 @@
 									<tbody>
 										@foreach($clData as $clItem)
 										<tr>
-											<td>
-												@if($clItem['class'] == 'bekas_terbakar')
-												Bekas terbakar
-												@elseif($clItem['class'] == 'lahan_terbuka')
-												Lahan Terbuka
-												@elseif($clItem['class'] == 'vegetasi')
-												Vegetasi
-												@endif
-											</td>
+											<td>{{ $clItem['class'] }}</td>
 											<td>{{ $clItem['pixel'] }}</td>
 											<td>{{ $clItem['luas_in_ha'] }} Ha</td>
 											<td>{{ $clItem['luas_in_percent'] }}%</td>
