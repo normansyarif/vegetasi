@@ -1,4 +1,4 @@
-# Konfigurasi
+## Cara instal
 
 - pip install pandas, sklearn, numpy
 - Buka /laravel/app/Http/Controllers/PageController.php
