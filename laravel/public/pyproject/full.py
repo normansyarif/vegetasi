@@ -44,6 +44,8 @@ unique, counts = np.unique(cl, return_counts=True)
 data = dict(zip(unique, counts))
 res = ",".join(("{}={}".format(*i) for i in data.items()))
 
+result.to_csv(absolutePath + "hasil_klasifikasi.csv", encoding='utf-8', index=False)
+
 arr.append(length);
 arr.append(res);
 print(json.dumps(arr))

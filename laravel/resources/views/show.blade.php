@@ -113,7 +113,7 @@
 							
 							@if(file_exists('pyproject/train.csv')) 
 
-							<p><span>Dataset tersedia</span> <a style="margin-left: 5px;" class="text-danger" href="{{ route('ds-train-delete') }}"><i class="fa fa-trash" aria-hidden="true"></i></a></p>
+							<p><span>Dataset tersedia</span> <a style="margin-left: 5px;" class="text-danger" href="{{ route('ds-train-delete') }}"><i class="fa fa-trash" aria-hidden="true"></i> hapus</a></p>
 
 							@else
 
@@ -124,7 +124,7 @@
 							<form action="{{ route('upload-train') }}" method="post" enctype="multipart/form-data">
 								@csrf
 								<input name="ds-train" type="file" class="form-control" required>
-								<button style="margin-top: 10px" type="submit" class="btn btn-sm btn-primary">Upload</button>
+								<button style="margin-top: 10px" type="submit" class="btn btn-sm btn-primary"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
 							</form>
 
 						</div>
@@ -145,7 +145,7 @@
 						<div class="col-md-6 col-sm-12">
 							@if(file_exists('pyproject/full.csv')) 
 
-							<p><span>Dataset tersedia</span> <a style="margin-left: 5px;" class="text-danger" href="{{ route('ds-full-delete') }}"><i class="fa fa-trash" aria-hidden="true"></i></a></p>
+							<p><span>Dataset tersedia</span> <a style="margin-left: 5px;" class="text-danger" href="{{ route('ds-full-delete') }}"><i class="fa fa-trash" aria-hidden="true"></i> hapus</a></p>
 
 							@else
 
@@ -156,7 +156,7 @@
 							<form action="{{ route('upload-full') }}" method="post" enctype="multipart/form-data">
 								@csrf
 								<input name="ds-full" type="file" class="form-control" required>
-								<button style="margin-top: 10px" type="submit" class="btn btn-sm btn-primary">Upload</button>
+								<button style="margin-top: 10px" type="submit" class="btn btn-sm btn-primary"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
 							</form>
 
 						</div>
@@ -184,6 +184,7 @@
 									</tbody>
 								</table>
 							</div>
+							<a href="{{ url('pyproject/hasil_klasifikasi.csv') }}" class="btn btn-sm btn-primary" style="margin-top: 10px"><i class="fa fa-download" aria-hidden="true"></i> Download hasil klasifikasi</a>
 							@endif
 						</div>
 					</div>
